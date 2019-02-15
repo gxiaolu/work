@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选或全不选</title>
+</head>
+<body>
+  <input id="btn1" type="button" value="全选" name=""/><br>
+  <div id="div1">
+      <input type="checkbox"/><br>
+      <input type="checkbox"/><br>
+      <input type="checkbox"/><br>
+      <input type="checkbox"/><br>
+      <input type="checkbox"/><br>
+  </div>
+</body>
+<script type="text/javascript">
+window.onload=function(){
+	var oBtn1=document.getElementById('btn1');
+	var oDiv=document.getElementById('div1');//获取div
+	var aCh=oDiv.getElementsByTagName('input');//这句话表示的是div下的input标签
+	oBtn1.onclick=function(){
+      aCh[0].checked=true; ///checked这个是选中的状态
+      //如果希望点击之后所有的都是选中的那就来个for循环
+	};
+
+};
+</script>
+</html>
